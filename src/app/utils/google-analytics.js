@@ -9,10 +9,11 @@ const initializeGA = () => {
   console.log("GA INITIALIZED");
 };
 
-const trackGAEvent = (category, action, label) => {
-  console.log("GA event:", category, ":", action, ":", label);
+const trackGAEvent = (name,category, action, label) => {
+  console.log("GA event:",name,category, action, label);
   // Send GA4 Event
   ReactGA.event({
+    name: name, 
     category: category,
     action: action,
     label: label,

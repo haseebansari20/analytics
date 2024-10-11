@@ -8,14 +8,13 @@ export default function MyForm({ className }) {
   // You can use it in any function call where you 
   // want to track an event
   function handleSubmit(event) {
-    trackGAEvent("My Category", "My Action", "My Label");
+    trackGAEvent("Ansari","My Category", "My Action", "My Label");
     // handle the actual form submission here
   }
 
   return (
     <form className={className} action={handleSubmit}>
       <input type="text" placeholder="Name" />
-      
       <button type="submit">Submit</button>
     </form>
   );

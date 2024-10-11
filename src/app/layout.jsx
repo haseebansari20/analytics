@@ -2,8 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
-import GoogleAnalytics from "./components/GoogleAnalytics";
 import MyForm from "./components/MyForm";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,11 +27,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GoogleAnalytics />
-        <MyForm />
+        {/* <GoogleAnalytics />
+        <MyForm /> */}
         {/* <Navbar />
         <Card/> */}
         {children}
+        <GoogleAnalytics gaId="G-H86EYVTC69" />
       </body>
     </html>
   );
