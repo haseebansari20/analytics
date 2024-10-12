@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './components/Button'
 import Button2 from './components/Button2'
-
+import Button3 from './components/Button3'
 
 const page = () => {
   return (
@@ -48,7 +48,8 @@ const page = () => {
   </div>
 </section> */}
 {/* <Button /> */}
-<Button2 />
+{/* <Button2 /> */}
+<Button3/>
     </div>
   )
 }
