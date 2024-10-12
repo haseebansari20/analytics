@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Card from "./components/Card";
 import MyForm from "./components/MyForm";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,6 +25,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head><script async src="https://www.googletagmanager.com/gtag/js?id=G-E9KSFS3GG8"></script>
+<Script id="google-analytics">
+  {`
+ window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E9KSFS3GG8');
+  `}
+ 
+</Script>
+</head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

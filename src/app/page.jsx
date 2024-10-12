@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from './components/Button'
+import Button2 from './components/Button2'
+
 
 const page = () => {
   return (
@@ -45,7 +47,8 @@ const page = () => {
       </div>
   </div>
 </section> */}
-<Button />
+{/* <Button /> */}
+<Button2 />
     </div>
   )
 }
