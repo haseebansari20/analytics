@@ -7,6 +7,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from "next/script";
 import { GoogleTagManager } from '@next/third-parties/google'
 
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -26,19 +27,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <head><script async src="https://www.googletagmanager.com/gtag/js?id=G-E9KSFS3GG8"></script>
-<Script id="google-analytics">
-  {`
- window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-E9KSFS3GG8');
-  `}
- 
-</Script>
-</head> */}
- <GoogleTagManager gtmId="GTM-MLGS795P" />
+ {/* <GoogleTagManager gtmId="GTM-MLGS795P" /> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -46,6 +36,18 @@ export default function RootLayout({ children }) {
         <MyForm /> */}
         {/* <Navbar />
         <Card/> */}
+        <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-H86EYVTC69`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-H86EYVTC69');
+        `}
+      </Script>
         {children}
         {/* <GoogleAnalytics gaId="G-H86EYVTC69" /> */}
        
